@@ -100,6 +100,9 @@ class Task
     system("source ~/.bash_profile; #{@settings["command"]}")
     update_status(Status::BENCH_DONE)
     @end_time = Time.now
+    system("git add 2018*")
+    system("git commit -am \"add result dir\"")
+    system("git push win master")
   end
 
   attr_accessor :taskname, :settings, :status, :start_time, :end_time, :last_status_change
@@ -155,4 +158,4 @@ $tasks.each do |task|
 end
 
 # Rename to .done file
-File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
+#File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
