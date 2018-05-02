@@ -2,11 +2,11 @@
 base = nvme
 target = gmap
 restore = false
-command = "sh superpgbench.sh -t gmap -T 600 -c 64 -j 5 -b nvme"
+command = "sh superpgbench.sh -t gmap -T 10 -c 64 -j 5 -b nvme"
 
 [task2]
 base = nvme
 target = master
 restore = false
-command = "sh superpgbench.sh -t gmap -T 300 -c 64 -j 5 -b nvme"
+command = "sh superpgbench.sh -t gmap -T 5 -c 64 -j 5 -b nvme"
 
