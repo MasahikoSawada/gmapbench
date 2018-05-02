@@ -1,5 +1,5 @@
 [task1]
 base = nvme
-target = master
+target = gmap
 restore = true
 command = "/bin/vmstat 1 1"
