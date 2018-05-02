@@ -1,0 +1,6 @@
+[task1]
+base = nvme
+target = master
+restore = true
+command = "/bin/vmstat 1 1"
+
