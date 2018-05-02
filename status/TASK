@@ -8,7 +8,7 @@ command = "sh superpgbench.sh -t gmap -T 5 -c 64 -j 5 -b nvme"
 base = nvme
 target = master
 restore = true
-command = "sh superpgbench.sh -t master -T 5 -c 64 -j 5 -b nvme"
+command = "sh superpgbench.sh -t master -T 2 -c 64 -j 5 -b nvme"
 
 [task3]
 base = nvme
