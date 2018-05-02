@@ -99,6 +99,7 @@ class Task
     update_status(Status::BENCH)
     system("source ~/.bash_profile; #{@settings["command"]}")
     update_status(Status::BENCH_DONE)
+    system("source ~/.bash_profile; use #{base}; stop #{target}")
     @end_time = Time.now
   end
 
