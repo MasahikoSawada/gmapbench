@@ -60,7 +60,7 @@ mkdir ${DIR}
 
 echo "
 
------- CONFIGURATIONS -----------
+------ CONFIGURATION -----------
 base	   = \"${BASE}\"
 target     = \"${TARGET}\"
 duration   = \"${DURATION}\"
