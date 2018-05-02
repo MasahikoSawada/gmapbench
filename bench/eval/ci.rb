@@ -155,7 +155,7 @@ $tasks.each do |task|
 end
 
 # Rename to .done file
-File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
-system("git add #{TASKDONEFILE}")
+#File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
+#system("git add #{TASKDONEFILE}")
 system("git commit -am \"TEST DONE\"")
 system("git push win master")
