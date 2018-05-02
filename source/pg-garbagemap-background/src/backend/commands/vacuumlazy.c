@@ -251,8 +251,7 @@ lazy_vacuum_rel(Relation onerel, int options, VacuumParams *params,
 	vacrelstats->hasindex = (nindexes > 0);
 
 	if (IsAutoVacuumWorkerProcess() && params->log_min_duration >= 0)
-		ereport(LOG, (errmsg("starting vacuum \"%s\"",
-							 RelationGetRelationName(onerel))));
+		ereport(LOG, (errmsg("starting vacuum on \"%s\"", RelationGetRelationName(onerel))));
 
 	/* Do the vacuuming */
 	lazy_scan_heap(onerel, workitem, vacrelstats, Irel, nindexes);
