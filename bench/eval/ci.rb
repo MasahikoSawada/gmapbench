@@ -156,4 +156,5 @@ $tasks.each do |task|
   task.dobench
 end
 
+# Rename to .done file
 File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
