@@ -2,6 +2,7 @@ require 'date'
 
 HOME = "/home/masahiko/pgsql"
 TASKFILE = "#{HOME}/TASK"
+TASKDONEFILE = "#{TASKFILE}.done"
 STATUSFILE = "#{HOME}/STATUS"
 
 module Status
@@ -105,6 +106,8 @@ class Task
 end
 
 ## 0. Prepare
+return if !File.exist?(TASKFILE)
+
 # Remove STATUS file
 File.unlink(STATUSFILE) if File.exist?(STATUSFILE)
 
@@ -152,3 +155,5 @@ end
 $tasks.each do |task|
   task.dobench
 end
+
+File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
