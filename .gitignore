@@ -1,0 +1,6 @@
+master/
+gmap/
+*.sar*
+/bench/eval/trush/
+TAGS
+source/pg-defer-index-vacuum
