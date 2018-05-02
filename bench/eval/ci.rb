@@ -95,7 +95,7 @@ class Task
       update_status(Status::RESTORE_DONE)
     end
 
-    #system("source ~/.bash_profile; use #{base}; stop #{target}")
+    system("source ~/.bash_profile; use #{base}; start #{target}")
     update_status(Status::BENCH)
     system("source ~/.bash_profile; #{@settings["command"]}")
     update_status(Status::BENCH_DONE)
