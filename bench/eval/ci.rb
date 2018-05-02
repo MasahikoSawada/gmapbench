@@ -105,6 +105,11 @@ class Task
   attr_accessor :taskname, :settings, :status, :start_time, :end_time, :last_status_change
 end
 
+if !File.exist?(TASKFILE) then
+  puts "TASKFILE doesn't exist, exit"
+  exit(1)
+end
+
 ## 0. Prepare
 # Remove STATUS file
 File.unlink(STATUSFILE) if File.exist?(STATUSFILE)
