@@ -50,7 +50,7 @@ J=${JOBS}		# threads
 F_GAU="/home/masahiko/pgsql/bench/eval/gaussian_bench.sql"	# script (gaussian)
 F_UNI="/home/masahiko/pgsql/bench/eval/uniformly_bench.sql"	# script (uniformly)
 PREFIX="${DIR}"		# log prefix
-RATE=0.5		# sampling rate
+RATE=0.2		# sampling rate
 OUT_FILE="${DIR}/${TARGET}_d${DURATION}_mon"
 PSQL="/nvme/${TARGET}/bin/psql -d postgres -p `s_to_port ${TARGET}`"
 ##################################
