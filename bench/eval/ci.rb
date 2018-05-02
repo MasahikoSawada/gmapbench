@@ -1,9 +1,9 @@
 require 'date'
 
 HOME = "/home/masahiko/pgsql"
-TASKFILE = "#{HOME}/TASK"
+TASKFILE = "#{HOME}/status/TASK"
 TASKDONEFILE = "#{TASKFILE}.done"
-STATUSFILE = "#{HOME}/STATUS"
+STATUSFILE = "#{HOME}/status/STATUS"
 
 module Status
   NONE = 0
