@@ -1,6 +1,6 @@
-\set aid random_gaussian(1, 100000 * , 2.0)
-\set bid random_gaussian(1, 1 * , 2.0)
-\set tid random_gaussian(1, 10 * , 2.0)
+\set aid random_gaussian(1, 100000 * 8000, 2.0)
+\set bid random_gaussian(1, 1 * 8000, 2.0)
+\set tid random_gaussian(1, 10 * 8000, 2.0)
 \set delta random_gaussian(-5000, 5000, 2.0)
 BEGIN;
 UPDATE pgbench_accounts SET abalance = abalance + :delta WHERE aid = :aid;

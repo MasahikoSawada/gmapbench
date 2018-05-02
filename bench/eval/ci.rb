@@ -112,8 +112,9 @@ end
 File.unlink(STATUSFILE) if File.exist?(STATUSFILE)
 
 # git pull and update binary
-system("git fetch win master")
-system("git reset --hard win/master")
+#system("git fetch win master")
+#system("git reset --hard win/master")
+system("git pull win master")
 system("sh scripts/update_source.sh")
 
 # Distributed conf file

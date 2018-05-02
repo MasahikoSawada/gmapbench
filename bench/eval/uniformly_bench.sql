@@ -1,6 +1,6 @@
-\set aid random(1, 100000 * )
-\set bid random(1, 1 * )
-\set tid random(1, 10 * )
+\set aid random(1, 100000 * 8000)
+\set bid random(1, 1 * 8000)
+\set tid random(1, 10 * 8000)
 \set delta random(-5000, 5000)
 BEGIN;
 UPDATE pgbench_accounts SET abalance = abalance + :delta WHERE aid = :aid;
