@@ -71,6 +71,7 @@ class Task
   # Restore!!
   def do_restore(base, target)
     puts "do restore #{base}, #{target}"
+    system("sh restore.sh #{base} #{target}")
   end
 
   # Do benchmarking!!!!
