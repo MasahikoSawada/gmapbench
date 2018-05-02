@@ -152,5 +152,6 @@ SARFILE="${TARGET}_d${DURATION}_mon"
 LC_TIME=C sar -A -f ${SARFILE}.sar > ${SARFILE}.sar.txt
 # $1 = sar.txt, $2 = .pg, $3 = pgbench
 ruby ../rsar.rb ${SARFILE}.sar.txt ${TARGET}_d${DURATION}_mon.pg ${PREFIX}.${pgbench_pid}
+rm -f ${SARFILE}.sar ${SARFILE}.sar.txt
 
 cd ..
