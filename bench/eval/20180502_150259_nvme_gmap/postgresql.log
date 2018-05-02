@@ -1,0 +1,16 @@
+2018-05-02 15:03:02.655 JST [58361] LOG:  received fast shutdown request
+2018-05-02 15:03:02.656 JST [58361] LOG:  aborting any active transactions
+2018-05-02 15:03:02.656 JST [59242] FATAL:  terminating autovacuum process due to administrator command
+2018-05-02 15:03:02.656 JST [58361] LOG:  background worker "logical replication launcher" (PID 58371) exited with exit code 1
+2018-05-02 15:03:02.662 JST [58370] FATAL:  terminating connection due to administrator command
+2018-05-02 15:03:02.669 JST [58361] LOG:  background worker "walker" (PID 58370) exited with exit code 1
+2018-05-02 15:03:02.675 JST [58365] LOG:  shutting down
+2018-05-02 15:03:02.675 JST [58365] LOG:  checkpoint starting: shutdown immediate
+2018-05-02 15:03:08.182 JST [58365] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 955 removed, 0 recycled; write=0.109 s, sync=0.000 s, total=5.507 s; sync files=0, longest=0.000 s, average=0.000 s; distance=213 kB, estimate=14075451 kB
+2018-05-02 15:03:08.950 JST [58361] LOG:  database system is shut down
+2018-05-02 15:03:09.695 JST [60943] LOG:  database system was shut down at 2018-05-02 15:03:02 JST
+2018-05-02 15:03:09.698 JST [60939] LOG:  database system is ready to accept connections
+2018-05-02 15:03:09.699 JST [60949] LOG:  restored 25079 13285 1663
+2018-05-02 15:03:09.702 JST [60949] LOG:  restored 25080 13285 1663
+2018-05-02 15:03:09.705 JST [60949] LOG:  restored 25082 13285 1663
+2018-05-02 15:03:09.709 JST [60949] LOG:  restored 25081 13285 1663
