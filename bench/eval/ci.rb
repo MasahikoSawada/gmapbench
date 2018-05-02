@@ -100,9 +100,6 @@ class Task
     system("source ~/.bash_profile; #{@settings["command"]}")
     update_status(Status::BENCH_DONE)
     @end_time = Time.now
-    system("git add 2018*")
-    system("git commit -am \"add result dir\"")
-    system("git push win master")
   end
 
   attr_accessor :taskname, :settings, :status, :start_time, :end_time, :last_status_change
@@ -113,7 +110,7 @@ end
 File.unlink(STATUSFILE) if File.exist?(STATUSFILE)
 
 # git pull and update binary
-#system("git pull win master")
+system("git pull win master")
 system("sh scripts/update_source.sh")
 
 # Distributed conf file
@@ -156,6 +153,3 @@ end
 $tasks.each do |task|
   task.dobench
 end
-
-# Rename to .done file
-#File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
