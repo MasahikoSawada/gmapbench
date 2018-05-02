@@ -55,6 +55,9 @@ OUT_FILE="${DIR}/${TARGET}_d${DURATION}_mon"
 PSQL="/nvme/${TARGET}/bin/psql -d postgres -p `s_to_port ${TARGET}`"
 ##################################
 
+use ${BASE}
+mkdir ${DIR}
+
 echo "
 
 --------------------------------
@@ -65,10 +68,7 @@ clients    = \"${CLIENTS}\"
 jobs       = \"${JOBS}\"
 output dir = \"${DIR}\"
 --------------------------------
-"
-
-use ${BASE}
-mkdir ${DIR}
+" | tee ${DIR}/pgbench_result.txt
 
 scale=`${PSQL} -X -Atqc "select count(*) from pgbench_branches"`
 
@@ -127,7 +127,7 @@ $PGBENCH \
     --file=${F_GAU}@5 \
     --file=${F_UNI}@1 \
     --aggregate-interval=1 \
-    --log-prefix=${PREFIX} > ${DIR}/pgbench_result.txt 2>&1 &
+    --log-prefix=${PREFIX} >> ${DIR}/pgbench_result.txt 2>&1 &
 pgbench_pid=$!
 ##########################
 
