@@ -1,9 +1,9 @@
 require 'date'
 
 HOME = "/home/masahiko/pgsql"
-TASKFILE = "#{HOME}/status/TASK"
+TASKFILE = "#{HOME}/TASK"
 TASKDONEFILE = "#{TASKFILE}.done"
-STATUSFILE = "#{HOME}/status/STATUS"
+STATUSFILE = "#{HOME}/STATUS"
 
 module Status
   NONE = 0
@@ -110,7 +110,7 @@ end
 File.unlink(STATUSFILE) if File.exist?(STATUSFILE)
 
 # git pull and update binary
-system("git pull win master")
+#system("git pull win master")
 system("sh scripts/update_source.sh")
 
 # Distributed conf file
@@ -155,7 +155,4 @@ $tasks.each do |task|
 end
 
 # Rename to .done file
-#File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
-#system("git add #{TASKDONEFILE}")
-system("git commit -am \"TEST DONE\"")
-system("git push win master")
+File.rename(TASKFILE, TASKDONEFILE) if File.exist?(TASKFILE)
