@@ -15,10 +15,10 @@ command = "sh superpgbench.sh -t master -T 7200 -c 32 -j 2 -b nvme"
 base = hdd
 target = gmap
 restore = true
-command = "sh superpgbench.sh -t gmap -T 3600 -c 64 -j 5 -b hdd"
+command = "sh superpgbench.sh -t gmap -T 3600 -c 32 -j 2 -b hdd"
 
 [task4]
 base = hdd
 target = master
 restore = true
-command = "sh superpgbench.sh -t master -T 3600 -c 64 -j 5 -b hdd"
+command = "sh superpgbench.sh -t master -T 3600 -c 32 -j 2 -b hdd"
