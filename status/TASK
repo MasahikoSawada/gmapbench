@@ -1,24 +1,12 @@
 [task1]
 base = nvme
 target = gmap
-restore = true
-command = "sh superpgbench.sh -t gmap -T 3600 -c 32 -j 2 -b nvme"
+restore = false
+command = "sh superpgbench.sh -t gmap -T 7200 -c 32 -j 2 -b nvme"
 
 
 [task2]
 base = nvme
 target = master
-restore = true
-command = "sh superpgbench.sh -t master -T 3600 -c 32 -j 2 -b nvme"
-
-[task3]
-base = hdd
-target = gmap
-restore = true
-command = "sh superpgbench.sh -t gmap -T 3600 -c 32 -j 2 -b hdd"
-
-[task4]
-base = hdd
-target = master
-restore = true
-command = "sh superpgbench.sh -t master -T 3600 -c 32 -j 2 -b hdd"
+restore = false
+command = "sh superpgbench.sh -t master -T 7200 -c 32 -j 2 -b nvme"

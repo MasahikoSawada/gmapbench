@@ -222,7 +222,7 @@ _PG_init(void)
 							"The ratio of pages being vacuumed",
 							NULL,
 							&range_vacuum_percent,
-							20, /* 30 % */
+							40, /* 30 % */
 							0,
 							100,
 							PGC_USERSET,
