@@ -71,6 +71,8 @@ rate       = \"${RATE}\"
 --------------------------------
 " | tee ${DIR}/pgbench_result.txt
 
+df -h >> ${DIR}/pgbench_result.txt
+
 scale=`${PSQL} -X -Atqc "select count(*) from pgbench_branches"`
 
 #### PREPARE TO BENCH ####
