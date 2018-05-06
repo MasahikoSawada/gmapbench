@@ -4,7 +4,7 @@ target = master
 restore = true
 command = "sh superpgbench.sh -t master -T 14400 -c 32 -j 2 -b nvme"
 
-[task2]
+[task3]
 base = nvme
 target = gmap
 restore = true
