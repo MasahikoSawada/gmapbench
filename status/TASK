@@ -1,4 +1,4 @@
-[task1]
+[task2]
 base = nvme
 target = gmap
 restore = true
