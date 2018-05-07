@@ -1,5 +1,6 @@
 [task2]
 base = nvme
-target = gmap
+target = master
 restore = true
-command = "sh superpgbench.sh -t gmap -T 14400 -c 32 -j 2 -b nvme"
+cleanup = false
+command = "sh superpgbench.sh -t master -T 14400 -c 32 -j 2 -b nvme"
