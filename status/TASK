@@ -2,13 +2,6 @@
 base = nvme
 target = gmap
 restore = false
-cleanup = false
-command = "sh superpgbench.sh -t gmap -T 30 -c 32 -j 2 -b nvme"
-
-[task3]
-base = nvme
-target = gmap
-restore = false
-cleanup = false
+cleanup = true
 command = "sh superpgbench.sh -t gmap -T 10 -c 32 -j 2 -b nvme"
 
