@@ -1,4 +1,4 @@
-[task1]
+[task]
 base = nvme
 target = master
 restore = true
