@@ -16,5 +16,5 @@ command = "sh superpgbench.sh -t gmap -T 21600 -c 64 -j 32 -b nvme"
 base = nvme
 target = gmap-defer
 restore = true
-cleanup = true
+cleanup = false
 command = "sh superpgbench.sh -t gmap-defer -T 900 -c 64 -j 32 -b nvme"
