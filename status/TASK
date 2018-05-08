@@ -1,6 +1,20 @@
+[task1]
+base = nvme
+target = master
+restore = true
+cleanup = true
+command = "sh superpgbench.sh -t master -T 21600 -c 64 -j 32 -b nvme"
+
 [task2]
 base = nvme
 target = gmap
-restore = false
-cleanup = false
-command = "sh superpgbench.sh -t gmap -T 900 -c 64 -j 32 -b nvme"
+restore = true
+cleanup = true
+command = "sh superpgbench.sh -t gmap -T 21600 -c 64 -j 32 -b nvme"
+
+[task3]
+base = nvme
+target = gmap-defer
+restore = true
+cleanup = true
+command = "sh superpgbench.sh -t gmap-defer -T 900 -c 64 -j 32 -b nvme"
