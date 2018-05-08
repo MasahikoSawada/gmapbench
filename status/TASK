@@ -4,10 +4,3 @@ target = master
 restore = true
 cleanup = false
 command = "sh superpgbench.sh -t master -T 14400 -c 32 -j 2 -b nvme"
-
-]task2]
-base = nvme
-target = master
-restore = false
-cleanup = true
-command = "sh superpgbench.sh -t master -T 14400 -c 32 -j 2 -b nvme"
