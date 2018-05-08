@@ -3,4 +3,4 @@ base = nvme
 target = gmap
 restore = true
 cleanup = false
-command = "sh superpgbench.sh -t gmap -T 600 -c 64 -j 32 -b nvme"
+command = "sh superpgbench.sh -t gmap -T 300 -c 64 -j 32 -b nvme"
