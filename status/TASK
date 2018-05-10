@@ -3,11 +3,11 @@ base = nvme
 target = gmap
 restore = true
 cleanup = true
-command = "sh superpgbench.sh -t gmap -T 1440 -c 64 -j 32 -b nvme
+command = "sh superpgbench.sh -t gmap -T 14400 -c 64 -j 32 -b nvme
 
 [task1]
 base = nvme
 target = master
 restore = true
 cleanup = false
-command = "sh superpgbench.sh -t master -T 1440 -c 64 -j 32 -b nvme
+command = "sh superpgbench.sh -t master -T 14400 -c 64 -j 32 -b nvme
