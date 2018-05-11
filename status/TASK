@@ -1,11 +1,11 @@
-[task2]
+[task1]
 base = nvme
 target = gmap
 restore = true
 cleanup = true
 command = "sh superpgbench.sh -t gmap -T 10800 -c 64 -j 32 -b nvme
 
-[task1]
+[task2]
 base = nvme
 target = master
 restore = true
