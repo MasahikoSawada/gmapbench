@@ -10,4 +10,5 @@ base = nvme
 target = master
 restore = true
 cleanup = true
+percent = 80
 command = "sh superpgbench.sh -t master -T 21600 -c 64 -j 32 -b nvme
