@@ -1,7 +1,15 @@
 [task1]
 base = nvme
+target = master
+restore = true
+cleanup = true
+percent = 30
+command = "sh superpgbench.sh -t master -T 30 -c 64 -j 32 -b nvme
+
+[task1]
+base = nvme
 target = gmap
 restore = true
 cleanup = true
 percent = 30
-command = "sh superpgbench.sh -t gmap -T 43200 -c 64 -j 32 -b nvme
+command = "sh superpgbench.sh -t gmap -T 30 -c 64 -j 32 -b nvme
