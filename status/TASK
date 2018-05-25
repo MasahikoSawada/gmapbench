@@ -4,5 +4,5 @@ target = master
 restore = true
 cleanup = true
 percent = 50
-command = "sh superpgbench.sh -t gmap -T 60000 -c 64 -j 32 -b nvme
+command = "sh superpgbench.sh -t master -T 60000 -c 64 -j 32 -b nvme
 
