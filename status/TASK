@@ -1,8 +1,7 @@
-[task1]
+[task]
 base = nvme
 target = gmap
 restore = true
 cleanup = true
-percent = 50
-command = "sh superpgbench.sh -t gmap -T 60000 -c 64 -j 32 -b nvme
-
+percent = 30
+command = "sh superpgbench.sh -t gmap -T 43200 -c 64 -j 32 -b nvme
